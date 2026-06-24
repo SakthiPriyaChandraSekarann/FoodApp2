@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -204,15 +205,18 @@ export default function CartPage() {
                 <span className="text-base font-semibold text-ink">Total</span>
                 <span className="text-xl font-bold text-orange">{money(total)}</span>
               </div>
-
+                
               <button
                 disabled={items.length === 0}
                 className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-orange py-3.5 text-sm font-semibold text-white transition-colors hover:bg-orange-600 disabled:cursor-not-allowed disabled:opacity-50"
               >
-                Proceed to Checkout
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
-                  <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+              <Link href="/checkout">
+                  Proceed to Checkout →
+                </Link>
+
+               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+               </svg>
               </button>
               <p className="mt-3 flex items-center justify-center gap-1.5 text-xs text-sub">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

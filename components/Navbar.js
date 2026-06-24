@@ -5,16 +5,17 @@ export default function Navbar({ active = "Home", cartCount = 2 }) {
     { label: "Home", href: "/" },
     { label: "Restaurants", href: "/restaurants" },
     { label: "Categories", href: "/categories" },
-    { label: "Offers", href: "#" },
-    { label: "Partner With Us", href: "#" },
-    { label: "Contact Us", href: "#" },
+    { label: "Offers", href: "/offers" },
+    { label: "Partner With Us", href: "/partners" },
+    { label: "Contact Us", href: "/contact" },
+   
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-cream/90 backdrop-blur-sm">
       <div className="container-px mx-auto flex max-w-7xl items-center justify-between py-5">
         <Link href="/" className="font-display text-xl font-bold tracking-tight">
-          Food<span className="text-orange">Go</span>
+          Food<span className="text-orange-700">Go</span>
         </Link>
 
         <nav className="hidden items-center gap-8 text-sm font-medium text-ink/80 lg:flex">
